@@ -17,18 +17,14 @@ The FSPL model assumes ideal line-of-sight propagation without obstacles or refl
 
 #### Formula:
 
-![Two-Ray formula](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}P_r=\frac{P_t\cdot&space;G_t\cdot&space;G_r\cdot&space;h_t^2\cdot&space;h_r^2}{d^4})
-
-The power-based form used in this program:
-
 ![Power-based FSPL](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}P_r=P_t\cdot&space;G_t\cdot&space;G_r\cdot\left(\frac{\lambda}{4\pi&space;d}\right)^2&space;)
 
 Where:  
-- ![Formula with explanation](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}\text{P_r : Received power (W)})
-- \(P_t\): Transmit power (W)  
-- \(G_t, G_r\): Antenna gains (unitless)  
-- \(\lambda = \frac{c}{f}\): Wavelength (m)  
-- \(d\): Distance between transmitter and receiver (m)
+- P_r : Received power (W)
+- P_t : Transmit power (W)  
+- G_t, G_r: Antenna gains (unitless)  
+- λ : Wavelength (m)  
+- d : Distance between transmitter and receiver (m)
 
 ---
 
@@ -38,10 +34,10 @@ This model accounts for both the direct and ground-reflected signals, better mod
 
 #### Formula:
 
-![Two-Ray formula](https://latex.codecogs.com/png.latex?P_r%20%3D%20%5Cfrac%7BP_t%20%5Ccdot%20G_t%20%5Ccdot%20G_r%20%5Ccdot%20h_t%5E2%20%5Ccdot%20h_r%5E2%7D%7Bd%5E4%7D)
+![Two-Ray formula](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}P_r=\frac{P_t\cdot&space;G_t\cdot&space;G_r\cdot&space;h_t^2\cdot&space;h_r^2}{d^4})
 
 Where:  
-- \(h_t, h_r\): Transmit and receive antenna heights (m)
+- h_t, h_r : Transmit and receive antenna heights (m)
 
 ---
 
