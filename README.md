@@ -24,7 +24,7 @@ The power-based form used in this program:
 ![Power-based FSPL](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}P_r=P_t\cdot&space;G_t\cdot&space;G_r\cdot\left(\frac{\lambda}{4\pi&space;d}\right)^2&space;)
 
 Where:  
-- https://latex.codecogs.com/png.image?\dpi{110}\bg{black}P_r&space; : Received power (W)  
+- ![Formula with explanation](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}\text{P_r : Received power (W)})
 - \(P_t\): Transmit power (W)  
 - \(G_t, G_r\): Antenna gains (unitless)  
 - \(\lambda = \frac{c}{f}\): Wavelength (m)  
