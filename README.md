@@ -17,7 +17,7 @@ The FSPL model assumes ideal line-of-sight propagation without obstacles or refl
 
 #### Formula:
 
-![FSPL formula](https://latex.codecogs.com/png.latex?L_{fs}(dB)%20%3D%2020%20%5Clog_{10}(d)%20%2B%2020%20%5Clog_{10}(f)%20-%20147.55)
+![Two-Ray formula](https://latex.codecogs.com/png.image?\dpi{110}\bg{white}P_r=\frac{P_t\cdot&space;G_t\cdot&space;G_r\cdot&space;h_t^2\cdot&space;h_r^2}{d^4})
 
 The power-based form used in this program:
 
