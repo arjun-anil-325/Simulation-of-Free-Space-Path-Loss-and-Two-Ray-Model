@@ -21,7 +21,7 @@ The FSPL model assumes ideal line-of-sight propagation without obstacles or refl
 
 The power-based form used in this program:
 
-![Power-based FSPL](https://latex.codecogs.com/png.latex?P_r%20%3D%20P_t%20%5Ccdot%20G_t%20%5Ccdot%20G_r%20%5Ccdot%20%5Cleft(%5Cfrac%7B%5Clambda%7D%7B4%5Cpi%20d%7D%5Cright)%5E2)
+![Power-based FSPL](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}P_r=P_t\cdot&space;G_t\cdot&space;G_r\cdot\left(\frac{\lambda}{4\pi&space;d}\right)^2&space;)
 
 Where:  
 - \(P_r\): Received power (W)  
