@@ -47,9 +47,9 @@ The breakpoint distance marks where the model shifts from FSPL behavior to two-r
 
 #### Formula:
 
-![Breakpoint formula](https://latex.codecogs.com/png.latex?d_{break}%20%3D%20%5Cfrac%7B4%20%5Ccdot%20h_t%20%5Ccdot%20h_r%7D%7B%5Clambda%7D)
+![Breakpoint Distance](https://latex.codecogs.com/png.image?\dpi{110}\bg{black}d_{\text{break}}%20=%20\frac{4%20\cdot%20h_t%20\cdot%20h_r}{\lambda})
 
-Beyond \(d_{break}\), the received power drops off faster (∝ \(1/d^4\)) compared to FSPL (∝ \(1/d^2\)).
+Beyond d_break , the received power drops off faster (∝ (1/d^4)) compared to FSPL (∝ (1/d^2)).
 
 ---
 
