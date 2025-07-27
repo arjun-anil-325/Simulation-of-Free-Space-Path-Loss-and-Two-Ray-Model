@@ -13,55 +13,47 @@ It visualizes how the received power changes with distance using both models and
 
 ### 1. Free Space Path Loss (FSPL)
 
-The FSPL model assumes an ideal propagation environment with no obstacles, reflections, or scattering. It's used to estimate the received signal power over a line-of-sight (LOS) path.
+The FSPL model assumes ideal line-of-sight propagation without obstacles or reflections.
 
-#### **Formula:**
+#### Formula:
 
-\[
-L_{fs}(dB) = 20 \log_{10}(d) + 20 \log_{10}(f) - 147.55
-\]
+![FSPL formula](https://latex.codecogs.com/png.latex?L_{fs}(dB)%20%3D%2020%20%5Clog_{10}(d)%20%2B%2020%20%5Clog_{10}(f)%20-%20147.55)
 
-But in this program, we use the power-based form:
+The power-based form used in this program:
 
-\[
-P_r = P_t \cdot G_t \cdot G_r \cdot \left(\frac{\lambda}{4\pi d}\right)^2
-\]
+![Power-based FSPL](https://latex.codecogs.com/png.latex?P_r%20%3D%20P_t%20%5Ccdot%20G_t%20%5Ccdot%20G_r%20%5Ccdot%20%5Cleft(%5Cfrac%7B%5Clambda%7D%7B4%5Cpi%20d%7D%5Cright)%5E2)
 
-Where:
-- \( P_r \): Received power (W)
-- \( P_t \): Transmit power (W)
-- \( G_t, G_r \): Antenna gains (unitless)
-- \( \lambda = \frac{c}{f} \): Wavelength (m)
-- \( d \): Distance between transmitter and receiver (m)
+Where:  
+- \(P_r\): Received power (W)  
+- \(P_t\): Transmit power (W)  
+- \(G_t, G_r\): Antenna gains (unitless)  
+- \(\lambda = \frac{c}{f}\): Wavelength (m)  
+- \(d\): Distance between transmitter and receiver (m)
 
 ---
 
 ### 2. Two-Ray Ground Reflection Model
 
-This model considers **both direct path** and **reflected path** off the ground, more accurately modeling real-world propagation, especially over longer distances.
+This model accounts for both the direct and ground-reflected signals, better modeling propagation over longer distances.
 
-#### **Formula:**
+#### Formula:
 
-\[
-P_r = \frac{P_t \cdot G_t \cdot G_r \cdot h_t^2 \cdot h_r^2}{d^4}
-\]
+![Two-Ray formula](https://latex.codecogs.com/png.latex?P_r%20%3D%20%5Cfrac%7BP_t%20%5Ccdot%20G_t%20%5Ccdot%20G_r%20%5Ccdot%20h_t%5E2%20%5Ccdot%20h_r%5E2%7D%7Bd%5E4%7D)
 
-Where:
-- \( h_t, h_r \): Transmit and receive antenna heights (m)
-
-This model is more accurate beyond a certain **breakpoint distance**.
+Where:  
+- \(h_t, h_r\): Transmit and receive antenna heights (m)
 
 ---
 
 ### 3. Breakpoint Distance
 
-This is the distance where FSPL transitions to the two-ray model.
+The breakpoint distance marks where the model shifts from FSPL behavior to two-ray model behavior.
 
-\[
-d_{break} = \frac{4 \cdot h_t \cdot h_r}{\lambda}
-\]
+#### Formula:
 
-After \( d_{break} \), the received power decreases much faster (∝ \(1/d^4\)) compared to FSPL (∝ \(1/d^2\)).
+![Breakpoint formula](https://latex.codecogs.com/png.latex?d_{break}%20%3D%20%5Cfrac%7B4%20%5Ccdot%20h_t%20%5Ccdot%20h_r%7D%7B%5Clambda%7D)
+
+Beyond \(d_{break}\), the received power drops off faster (∝ \(1/d^4\)) compared to FSPL (∝ \(1/d^2\)).
 
 ---
 
@@ -80,22 +72,16 @@ After \( d_{break} \), the received power decreases much faster (∝ \(1/d^4\)) 
 
 ## 📊 Output
 
-The program plots:
-- **FSPL** curve (blue, dashed)
-- **Two-Ray** curve (red, solid)
-- **Breakpoint distance** (green dotted line)
-
-All on a **logarithmic scale** for clarity.
+The program plots both FSPL and Two-Ray received power versus distance on a logarithmic scale and marks the breakpoint distance.
 
 ---
 
 ## 📂 How to Run
 
-1. Ensure you have Python and the following libraries:
-   - `numpy`
-   - `matplotlib`
+1. Install required Python packages:  
+   `numpy`, `matplotlib`
 
-2. Run the script in any Python IDE or notebook.
+2. Run the Python script in your IDE or notebook.
 
 ---
 
